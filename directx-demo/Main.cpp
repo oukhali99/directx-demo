@@ -46,13 +46,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pScmdline,
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		1280, 720,
-		NULL,
-		NULL,
+		nullptr,
+		nullptr,
 		hInstance,
-		NULL
+		nullptr
 	);
 
-	if (hWnd == NULL)
+	if (hWnd == nullptr)
 	{
 		return 0;
 	}
@@ -60,7 +60,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pScmdline,
 	ShowWindow(hWnd, nCmdshow);
 
 	MSG message;
-	while (GetMessageA(&message, NULL, 0, 0)) {
+	while (GetMessageA(&message, nullptr, 0, 0)) {
 		TranslateMessage(&message);
 		DispatchMessage(&message);
 	}
